@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/21alp95gqa72yfr1?svg=true)](https://ci.appveyor.com/project/AssmBoss/carddeliveryanotherdate)
