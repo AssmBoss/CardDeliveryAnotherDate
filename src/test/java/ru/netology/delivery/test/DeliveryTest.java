@@ -27,7 +27,7 @@ class DeliveryTest {
     @DisplayName("Should successful plan and replan meeting")
     void shouldSuccessfulPlanAndReplanMeeting() throws IOException {
 
-        Configuration.holdBrowserOpen = true;
+        Configuration.holdBrowserOpen = false;
         var validUser = DataGenerator.Registration.generateUser("ru");
         var daysToAddForFirstMeeting = 4;
         var firstMeetingDate = DataGenerator.generateDate(daysToAddForFirstMeeting);
@@ -35,7 +35,6 @@ class DeliveryTest {
         var secondMeetingDate = DataGenerator.generateDate(daysToAddForSecondMeeting);
 
         $x("//input[@placeholder=\"Город\"]").setValue(validUser.getCity());
-        //$x("//input[@placeholder=\"Город\"]").setValue("Ростов-на-Дону");
         $x("//input[@placeholder=\"Город\"]").sendKeys(Keys.TAB);
         $x("//input[@placeholder=\"Дата встречи\"]").doubleClick();
         $x("//input[@placeholder=\"Дата встречи\"]").sendKeys(Keys.BACK_SPACE);
